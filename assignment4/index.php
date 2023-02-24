@@ -1,5 +1,5 @@
 <?php
-
+ $output ="";
  if(count($_POST) > 0){
   require_once 'AddNameProc.php';
   $addName = new AddNameProc();
