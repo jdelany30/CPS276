@@ -1,4 +1,5 @@
 <?php
+
 class Directories{
     public function addNewFile(){
             if(isset($_POST['submit'])){
