@@ -11,7 +11,6 @@ class noteProc{
         }
     }
 
-
     function addNote()
     {
         require_once "Proc/PdoMethods.php";
@@ -43,11 +42,10 @@ class noteProc{
         }
     }
 
-
     function getNotes()
     {  
         require_once "Proc/PdoMethods.php";
-        $output = '<table class="table table-bordered table-striped">
+        $output = '<table class="table  table-striped">
         <thead>
         <tr>
           <th scope="col">Date and Time</th>
@@ -64,9 +62,7 @@ class noteProc{
             [":begTime",$begTime,"int"],
             [":endTime",$endTime,"int"]
         ];
-
         $records = $pdo->selectBinded($sql, $bindings);
-
         foreach($records as $row)
         {
             $output .= '<tr><td>';
@@ -76,6 +72,5 @@ class noteProc{
         $output .= "</tbody></table>";
         return $output;
     }
-
 }
 ?>
